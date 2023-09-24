@@ -160,6 +160,7 @@
             RestoreWatchdogInterval_TextBox.Size = new Size(100, 23);
             RestoreWatchdogInterval_TextBox.TabIndex = 3;
             RestoreWatchdogInterval_TextBox.Text = "30";
+            RestoreWatchdogInterval_TextBox.TextAlign = HorizontalAlignment.Right;
             RestoreWatchdogInterval_TextBox.Validating += RestoreWatchdogInterval_TextBox_Validating;
             // 
             // RestoreWatchdogInterval_Label

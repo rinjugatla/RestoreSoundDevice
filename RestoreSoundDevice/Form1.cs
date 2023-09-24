@@ -30,7 +30,7 @@ namespace RestoreSoundDevice
         public Form1()
         {
             InitializeComponent();
-            
+
             UpdateFormTitle();
 
             MMDeviceEnumerator = new MMDeviceEnumerator(Guid.NewGuid());
@@ -181,6 +181,7 @@ namespace RestoreSoundDevice
 
             RestoreModeSwitch_Button.BackColor = color;
             RestoreModeSwitch_Button.Text = text;
+            RestoreWatchdogInterval_TextBox.ReadOnly = IsRunningRestoreWatchdog;
 
             if (IsRunningRestoreWatchdog) { RestoreDefaultDeviceWatchDowg(); }
         }
