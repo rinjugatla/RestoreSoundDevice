@@ -189,6 +189,8 @@
             ClientSize = new Size(866, 373);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "Form1";
             Text = "音声デバイス設定自動復元ツール";
             FormClosing += Form1_FormClosing;

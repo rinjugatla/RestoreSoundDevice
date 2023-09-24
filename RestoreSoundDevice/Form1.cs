@@ -45,7 +45,7 @@ namespace RestoreSoundDevice
 
             RestoreModeSwitch_Button.PerformClick();
             Task.Run(async () => { await Task.Delay(1500); });
-            
+
         }
 
         #region デバイス
