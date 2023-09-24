@@ -47,6 +47,10 @@ namespace RestoreSoundDevice
         {
             Properties.Settings.Default.RestoreWatchdogInterval = RestoreWatchdogInterval_TextBox.Text;
             Properties.Settings.Default.Save();
+
+            this.WindowState = FormWindowState.Minimized;
+
+            e.Cancel = true;
         }
 
         #region デバイス

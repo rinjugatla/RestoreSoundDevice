@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             GetDevice_Button = new Button();
             CaptureDevice_DataGridView = new DataGridView();
             CaptureDeviceNameColumn = new DataGridViewTextBoxColumn();
@@ -41,6 +43,7 @@
             RestoreWatchdogInterval_TextBox = new TextBox();
             RestoreWatchdogInterval_Label = new Label();
             RestoreModeSwitch_Button = new Button();
+            NotifyIcon = new NotifyIcon(components);
             ((System.ComponentModel.ISupportInitialize)CaptureDevice_DataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)RenderDevice_DataGridView).BeginInit();
             groupBox1.SuspendLayout();
@@ -63,8 +66,8 @@
             CaptureDevice_DataGridView.AllowUserToDeleteRows = false;
             CaptureDevice_DataGridView.AllowUserToResizeColumns = false;
             CaptureDevice_DataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(192, 255, 255);
-            CaptureDevice_DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(192, 255, 255);
+            CaptureDevice_DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             CaptureDevice_DataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CaptureDevice_DataGridView.Columns.AddRange(new DataGridViewColumn[] { CaptureDeviceNameColumn });
             CaptureDevice_DataGridView.Location = new Point(6, 33);
@@ -183,6 +186,12 @@
             RestoreModeSwitch_Button.UseVisualStyleBackColor = false;
             RestoreModeSwitch_Button.Click += RestoreModeSwitch_Button_Click;
             // 
+            // NotifyIcon
+            // 
+            NotifyIcon.Icon = (Icon)resources.GetObject("NotifyIcon.Icon");
+            NotifyIcon.Text = "サウンドデバイス設定自動復元ツール";
+            NotifyIcon.Visible = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -191,8 +200,10 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Form1";
+            ShowInTaskbar = false;
             Text = "サウンドデバイス設定自動復元ツール";
             FormClosing += Form1_FormClosing;
             ((System.ComponentModel.ISupportInitialize)CaptureDevice_DataGridView).EndInit();
@@ -218,5 +229,6 @@
         private Label RestoreWatchdogInterval_Label;
         private Button RestoreModeSwitch_Button;
         private TextBox RestoreWatchdogInterval_TextBox;
+        private NotifyIcon NotifyIcon;
     }
 }
