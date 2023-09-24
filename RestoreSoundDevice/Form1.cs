@@ -32,14 +32,20 @@ namespace RestoreSoundDevice
             InitializeComponent();
 
             MMDeviceEnumerator = new MMDeviceEnumerator(Guid.NewGuid());
+
+            RestoreWatchdogInterval_TextBox.Text = Properties.Settings.Default.RestoreWatchdogInterval;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Properties.Settings.Default.RestoreWatchdogInterval = RestoreWatchdogInterval_TextBox.Text;
+            Properties.Settings.Default.Save();
+
             if (!IsRunningRestoreWatchdog) { return; }
 
             RestoreModeSwitch_Button.PerformClick();
             Task.Run(async () => { await Task.Delay(1500); });
+            
         }
 
         #region デバイス
