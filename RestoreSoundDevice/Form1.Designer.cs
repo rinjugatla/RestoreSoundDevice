@@ -52,11 +52,11 @@
             // 
             // GetDevice_Button
             // 
-            GetDevice_Button.Location = new Point(731, 253);
+            GetDevice_Button.Location = new Point(712, 253);
             GetDevice_Button.Name = "GetDevice_Button";
-            GetDevice_Button.Size = new Size(97, 23);
+            GetDevice_Button.Size = new Size(116, 23);
             GetDevice_Button.TabIndex = 0;
-            GetDevice_Button.Text = "デバイスを取得";
+            GetDevice_Button.Text = "デバイスを再取得";
             GetDevice_Button.UseVisualStyleBackColor = true;
             GetDevice_Button.Click += GetDevice_Button_Click;
             // 
