@@ -8,4 +8,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CoreAudio" Version="1.37.0" />
+  </ItemGroup>
+
 </Project>
