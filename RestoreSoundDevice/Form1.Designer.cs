@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             GetDevice_Button = new Button();
             CaptureDevice_DataGridView = new DataGridView();
             CaptureDeviceNameColumn = new DataGridViewTextBoxColumn();
@@ -63,8 +63,8 @@
             CaptureDevice_DataGridView.AllowUserToDeleteRows = false;
             CaptureDevice_DataGridView.AllowUserToResizeColumns = false;
             CaptureDevice_DataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(192, 255, 255);
-            CaptureDevice_DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(192, 255, 255);
+            CaptureDevice_DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             CaptureDevice_DataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CaptureDevice_DataGridView.Columns.AddRange(new DataGridViewColumn[] { CaptureDeviceNameColumn });
             CaptureDevice_DataGridView.Location = new Point(6, 33);
@@ -193,7 +193,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "Form1";
-            Text = "音声デバイス設定自動復元ツール";
+            Text = "サウンドデバイス設定自動復元ツール";
             FormClosing += Form1_FormClosing;
             ((System.ComponentModel.ISupportInitialize)CaptureDevice_DataGridView).EndInit();
             ((System.ComponentModel.ISupportInitialize)RenderDevice_DataGridView).EndInit();
