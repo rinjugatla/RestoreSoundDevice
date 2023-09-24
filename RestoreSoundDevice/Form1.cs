@@ -40,12 +40,6 @@ namespace RestoreSoundDevice
         {
             Properties.Settings.Default.RestoreWatchdogInterval = RestoreWatchdogInterval_TextBox.Text;
             Properties.Settings.Default.Save();
-
-            if (!IsRunningRestoreWatchdog) { return; }
-
-            RestoreModeSwitch_Button.PerformClick();
-            Task.Run(async () => { await Task.Delay(1500); });
-
         }
 
         #region デバイス
