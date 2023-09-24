@@ -206,6 +206,7 @@
             ShowInTaskbar = false;
             Text = "サウンドデバイス設定自動復元ツール";
             FormClosing += Form1_FormClosing;
+            Shown += Form1_Shown;
             ((System.ComponentModel.ISupportInitialize)CaptureDevice_DataGridView).EndInit();
             ((System.ComponentModel.ISupportInitialize)RenderDevice_DataGridView).EndInit();
             groupBox1.ResumeLayout(false);

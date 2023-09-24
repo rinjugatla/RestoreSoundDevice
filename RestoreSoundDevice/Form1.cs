@@ -43,6 +43,11 @@ namespace RestoreSoundDevice
             this.Text += $" {version.Major}.{version.Minor}.{version.Build}";
         }
 
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            UpdateDeviceDataGridView();
+        }
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.RestoreWatchdogInterval = RestoreWatchdogInterval_TextBox.Text;
@@ -56,6 +61,12 @@ namespace RestoreSoundDevice
         #region デバイス
         /// <summary>デバイスの一覧を取得</summary>
         private void GetDevice_Button_Click(object sender, EventArgs e)
+        {
+            UpdateDeviceDataGridView();
+        }
+
+        /// <summary>デバイスの一覧を取得</summary>
+        private void UpdateDeviceDataGridView()
         {
             // アイテム追加時にイベントが発火してしまうので一時的に無効化
             CaptureDevice_DataGridView.CurrentCellChanged -= DataGridView_CurrentCellChanged;
