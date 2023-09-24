@@ -30,10 +30,17 @@ namespace RestoreSoundDevice
         public Form1()
         {
             InitializeComponent();
+            
+            UpdateFormTitle();
 
             MMDeviceEnumerator = new MMDeviceEnumerator(Guid.NewGuid());
-
             RestoreWatchdogInterval_TextBox.Text = Properties.Settings.Default.RestoreWatchdogInterval;
+        }
+
+        private void UpdateFormTitle()
+        {
+            var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version!;
+            this.Text += $" {version.Major}.{version.Minor}.{version.Build}";
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
