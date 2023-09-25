@@ -44,6 +44,7 @@ namespace RestoreSoundDevice
             this.Text += $" {version.Major}.{version.Minor}.{version.Build}";
         }
 
+        /// <summary>サイズ変更</summary>
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
             switch (this.WindowState)
@@ -59,6 +60,7 @@ namespace RestoreSoundDevice
             }
         }
 
+        /// <summary>タスクトレイのメニュー作成</summary>
         private ContextMenuStrip CreateContextMenu()
         {
             var menu = new ContextMenuStrip();
@@ -74,11 +76,13 @@ namespace RestoreSoundDevice
             return menu;
         }
 
+        /// <summary>タスクトレイ: 表示</summary>
         private void ShowMenuToolStripMenuItem_Click(object? sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
         }
 
+        /// <summary>タスクトレイ: 終了</summary>
         private void ExitMenuToolStripMenuItem_Click(object? sender, EventArgs e)
         {
             Application.Exit();
