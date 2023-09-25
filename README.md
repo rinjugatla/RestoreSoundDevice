@@ -1,49 +1,50 @@
-# �T�E���h�f�o�C�X�ݒ莩�������c�[��
+# サウンドデバイス設定自動復元ツール
 
-�T�E���h�f�o�C�X���ύX���ꂽ�ꍇ�Ƀc�[���Ŏw�肵���f�o�C�X�ɍĐݒ肵�܂��B
+サウンドデバイスが変更された場合にツールで指定したデバイスに再設定します。
 
-## ����
+## 導入
 
-1. .NET 6 Runtime�̓���
-   .NET 6 Runtime���K�v�ł��B  
-   ���łɓ����ς݂̏ꍇ�͑���s�v�ł��B
-   
-   �����炩��C���X�g�[�����_�E�����[�h���ăC���X�g�[�����Ă��������B  
-   [ASP.NET Core 6.0 Runtime (v6.0.22) - Windows x64 Installer �̃_�E�����[�h](https://dotnet.microsoft.com/ja-jp/download/dotnet/thank-you/runtime-aspnetcore-6.0.22-windows-x64-installer)
+1. .NET 6 Runtimeの導入
 
-2. �c�[���̓���
+   .NET 6 Runtimeが必要です。  
+   すでに導入済みの場合は操作不要です。
 
-   �T�E���h�f�o�C�X�ݒ莩�������c�[���̍ŐV�ł��ȉ�����_�E�����[�h�A�C�ӂ̈ʒu�ɉ𓀂��܂��B  
+   こちらからインストーラをダウンロードしてインストールしてください。  
+   [ASP.NET Core 6.0 Runtime (v6.0.22) - Windows x64 Installer のダウンロード](https://dotnet.microsoft.com/ja-jp/download/dotnet/thank-you/runtime-aspnetcore-6.0.22-windows-x64-installer)
+
+2. ツールの導入
+
+   サウンドデバイス設定自動復元ツールの最新版を以下からダウンロード、任意の位置に解凍します。  
    [RestoreSoundDevice - Release](https://github.com/rinjugatla/RestoreSoundDevice/releases)
 
-## �g����
+## 使い方
 
-1. RestoreSoundDevice.exe�����s		
+1. RestoreSoundDevice.exeを実行
 
-   ������s����Windows�̌x��(�����)���\�������ꍇ������܂��B  
-   �ڍ׃{�^���������Ď��s���܂��B
+   初回実行時にWindowsの警告(青い画面)が表示される場合があります。  
+   詳細ボタンを押して実行します。
 
-2. ������̃f�o�C�X���w��
+2. 復元先のデバイスを指定
 
-   ���ݐݒ肵�Ă���f�o�C�X���I�����ꂽ��Ԃŗ����オ��܂��B  
-   ���݂̓��́A�o�̓f�o�C�X��ύX����ꍇ�⎩��������̃f�o�C�X��ύX����ꍇ�͕ʂ̃f�o�C�X���w�肵�܂��B
+   現在設定しているデバイスが選択された状態で立ち上がります。  
+   現在の入力、出力デバイスを変更する場合や自動復元先のデバイスを変更する場合は別のデバイスを指定します。
 
-3. �Ď��Ԋu��ݒ�
+3. 監視間隔を設定
 
-   �Ď��Ԋu�ɔC�ӂ̕b�����w�肵�܂��B  
+   監視間隔に任意の秒数を指定します。  
 
-4. ��~���{�^��������
+4. 停止中ボタンを押下
 
-   ��~���{�^������������ƁA�Ď����ɐ؂�ւ��܂��B
-   �Ď��Ԋu���ɓ��o�̓f�o�C�X�̐ݒ���m�F���A�ύX������ΕύX�O�̃f�o�C�X�ɕ������܂��B
+   停止中ボタンを押下すると、監視中に切り替わります。
+   監視間隔毎に入出力デバイスの設定を確認し、変更があれば変更前のデバイスに復元します。
 
-5. �I�����@
+5. 終了方法
 
-   X�{�^���������Ə풓�A�v���Ƃ��ă^�X�N�g���C(��ʉE��)�Ɋi�[����܂��B
-   �I������ꍇ�̓^�X�N�g���C�̃A�C�R�����E�N���b�N���u�I���v���������܂��B
+   Xボタンを押すと常駐アプリとしてタスクトレイ(画面右下)に格納されます。
+   終了する場合はタスクトレイのアイコンを右クリックし「終了」を押下します。
 
-## ����
+## 権利
 
-1. �A�C�R��
+1. アイコン
 
    [Sound wave icons created by Victoruler - Flaticon](https://www.flaticon.com/free-icons/sound-wave)
