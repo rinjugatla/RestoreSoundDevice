@@ -48,3 +48,7 @@
 1. アイコン
 
    [Sound wave icons created by Victoruler - Flaticon](https://www.flaticon.com/free-icons/sound-wave)
+
+2. CoreAudio
+   [NuGet](https://www.nuget.org/packages/CoreAudio/)
+   [License](https://github.com/morphx666/CoreAudio/blob/master/LICENSE)
