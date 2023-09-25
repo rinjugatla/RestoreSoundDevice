@@ -35,12 +35,53 @@ namespace RestoreSoundDevice
 
             MMDeviceEnumerator = new MMDeviceEnumerator(Guid.NewGuid());
             RestoreWatchdogInterval_TextBox.Text = Properties.Settings.Default.RestoreWatchdogInterval;
+            NotifyIcon.ContextMenuStrip = CreateContextMenu();
         }
 
         private void UpdateFormTitle()
         {
             var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version!;
             this.Text += $" {version.Major}.{version.Minor}.{version.Build}";
+        }
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            switch (this.WindowState)
+            {
+                case FormWindowState.Normal:
+                    this.ShowInTaskbar = true;
+                    break;
+                case FormWindowState.Minimized:
+                    this.ShowInTaskbar = false;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private ContextMenuStrip CreateContextMenu()
+        {
+            var menu = new ContextMenuStrip();
+
+            var showMenu = new ToolStripMenuItem("ï\é¶");
+            showMenu.Click += ShowMenuToolStripMenuItem_Click;
+            menu.Items.Add(showMenu);
+
+            var exitMenu = new ToolStripMenuItem("èIóπ");
+            exitMenu.Click += ExitMenuToolStripMenuItem_Click;
+            menu.Items.Add(exitMenu);
+
+            return menu;
+        }
+
+        private void ShowMenuToolStripMenuItem_Click(object? sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+        }
+
+        private void ExitMenuToolStripMenuItem_Click(object? sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -267,5 +308,7 @@ namespace RestoreSoundDevice
             return isSame;
         }
         #endregion
+
+
     }
 }

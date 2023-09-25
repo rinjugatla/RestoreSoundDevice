@@ -202,11 +202,12 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Form1";
-            ShowInTaskbar = false;
             Text = "サウンドデバイス設定自動復元ツール";
             FormClosing += Form1_FormClosing;
             Shown += Form1_Shown;
+            SizeChanged += Form1_SizeChanged;
             ((System.ComponentModel.ISupportInitialize)CaptureDevice_DataGridView).EndInit();
             ((System.ComponentModel.ISupportInitialize)RenderDevice_DataGridView).EndInit();
             groupBox1.ResumeLayout(false);
