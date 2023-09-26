@@ -250,13 +250,13 @@ namespace RestoreSoundDevice
         {
             return Task.Run(async () =>
             {
+                int delayCount = 30;
+                int.TryParse(RestoreWatchdogInterval_TextBox.Text, out delayCount);
                 while (IsRunningRestoreWatchdog)
                 {
                     RestoreDefaultDevice(DataFlow.Capture);
                     RestoreDefaultDevice(DataFlow.Render);
-
-                    int delayCount = 30;
-                    int.TryParse(RestoreWatchdogInterval_TextBox.Text, out delayCount);
+                    
                     for (int i = 0; i < delayCount; i++)
                     {
                         // Žw’èŽžŠÔ‘Ò‹@‚·‚é‚Æ’¼‚¿‚ÉI—¹‚Å‚«‚È‚¢‚Ì‚Å1•b–ˆ‚Å”»’è
